@@ -6,15 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
+    <form method = "post" action = "submit_form.php">
         <label for="name"></label>
-        <input type="text" id="name" name="name" placeholder="Your Name">
-        <script>
-            const name = document.getElementById('name');
-            if (name = "") {
-                name = "cant be empty";
-            }
-        </script>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
     </form>
 </body>
 </html>
