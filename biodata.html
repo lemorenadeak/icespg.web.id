@@ -3,54 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Biodata</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    
-       <header class = "m-auto pt- bg-gray-200 md   ">
-        <div class = "container p-auto m-auto flex  justify-between">
-            <div class = ""><img src="img/WhatsApp-01.png" alt="LOGO" class = "h-30 w-30"></div>
-            <div class = "flex self-center">
-            <nav>
-                <ul class = "flex gap-10 text-[20px]  font-[helvetica]">
-                    <li class = "hover:underline"><a href="index.html">Home</a></li>
-                    <li><a href="biodata.html"><u>Biodata</u></a></li>
-                    <li class = "hover:underline"><a href="contact.html">Contact me</a></li>
-                    <li class = "hover:underline"><a href="additionPage.html">Additional Page</a></li>
-                    <li class = "hover:underline"><a href="additionPage.html">Additional Page</a></li>
-                </ul>
-            </nav>
-            </div>
+<body class="font-[helvetica] bg-blue-50 flex flex-col min-h-screen">
 
-            <div class = "flex self-center gap-4 font-[helvetica]">
-                <input type="button" value = "Log in   >" class = " bg-white rounded-full text-[20px]  px-7  ">
-                <input type="button" value = "Download" class = "bg-green-500 rounded-full  py-4 px-10 text-[20px] ">
+    <header class="sticky top-0 z-50 bg-white shadow-sm w-full">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div>
+                <img src="img/WhatsApp-01.png" alt="LOGO" class="h-14 w-auto">
+            </div>
+            <div class="hidden md:flex self-center">
+                <nav>
+                    <ul class="flex gap-10 text-[20px]">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li><a href="biodata.html" class="underline font-bold text-green-600">Biodata</a></li>
+                        <li class="hover:underline"><a href="contact.html">Contact me</a></li>
+                        <li class="hover:underline"><a href="posts.html">Additional Page</a></li>
+                        <li class="hover:underline"><a href="posts.html">Additional Page</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hidden md:flex self-center gap-4">
+                <input type="button" value="Log in >" class="bg-white rounded-full text-[20px] px-7 py-2 border border-black hover:bg-gray-100 cursor-pointer">
+                <input type="button" value="Download" class="bg-green-500 rounded-full py-2 px-10 text-[20px] text-white font-bold cursor-pointer">
+            </div>
+            <div class="md:hidden">
+                <button class="text-3xl">≡</button>
             </div>
         </div>
     </header>
 
-    <div class = "container max-w-full p-auto flex items-center bg-blue-100 gap">
-
-        <div class = "flex m-10 p-10">
-            <img src="img/WhatsApp Image 2025-11-24 at 12.43.10 (1).jpeg" class = "w-200 "alt="">
+    <div id="mobile-navigation" class="md:hidden bg-gray-100 p-6 hidden">
+        <div class="flex flex-col gap-6 text-center">
+            <nav>
+                <ul class="flex flex-col gap-4 text-[20px]">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biodata.html" class="font-bold text-green-600">Biodata</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <div class = "max-w-1000 max-h-fit text-[20px] font-[helvetica] bg-blue-100 mr-20  border-2  border-black">
-        <p>Name: ELmore Melashenkho Nadeak</p>
-        <p>Student ID: 2481047</p>
-        <p>Faculty: FTI</p>
-        <p>Hobbies: Swimming, Gaming, and Sleeping</p>
-        <p>Skills: basic web development and basic programming</p><br>
-
-        <p class = "">TESTIMONY</p>
-        <p>I learn how to <a class = "bg-yellow-200">program a simple website</a> because of this class even though is just basic, this skill made <a>cloning the WhatsApp website possible even though i cant 
-            clone everthing yet. I learn how to style my website using tailwindcss.
-        </p>     
-        </div>
-
-        
     </div>
+
+    <main class="flex-grow container mx-auto px-4 py-10 flex items-center justify-center">
+        
+        <div class="bg-white rounded-[30px] shadow-lg p-8 md:p-12 w-full max-w-5xl flex flex-col md:flex-row items-center md:items-start gap-10 border border-gray-200">
+
+            <div class="flex-shrink-0">
+                <img src="img/WhatsApp Image 2025-11-24 at 12.43.10 (1).jpeg" alt="Profile Picture" class="w-64 h-64 md:w-80 md:h-auto object-cover rounded-2xl shadow-md border-4 border-white ring-1 ring-gray-200">
+            </div>
+
+            <div class="flex flex-col gap-4 text-[20px] w-full">
+                
+                <h1 class="text-3xl font-bold mb-4 border-b pb-2">Student Profile</h1>
+
+                <div class="grid grid-cols-1 gap-2">
+                    <p><span class="font-bold w-32 inline-block">Name:</span> ELmore Melashenkho Nadeak</p>
+                    <p><span class="font-bold w-32 inline-block">Student ID:</span> 2481047</p>
+                    <p><span class="font-bold w-32 inline-block">Faculty:</span> FTI</p>
+                    <p><span class="font-bold w-32 inline-block">Hobbies:</span> Swimming, Gaming, and Sleeping</p>
+                    <p><span class="font-bold w-32 inline-block">Skills:</span> Basic web development and basic programming</p>
+                </div>
+
+                <div class="mt-6 bg-yellow-50 p-6 rounded-xl border border-yellow-200">
+                    <p class="font-bold text-xl mb-2 text-yellow-800">TESTIMONY</p>
+                    <p class="leading-relaxed text-gray-700">
+                        I learn how to <span class="bg-yellow-200 px-1 rounded">program a simple website</span> because of this class even though is just basic, this skill made cloning the WhatsApp website possible even though I cant clone everything yet. I learn how to style my website using TailwindCSS.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="bg-[#111b21] text-white py-10 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">School Project Assignment • Biodata Page</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('button.text-3xl');
+        const menu = document.getElementById('mobile-navigation');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>

@@ -3,82 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Contact Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class = "bg-blue-100">
-    <header class = "m-auto pt- bg-gray-200">
-        <div class = "container p-auto m-auto flex  justify-between">
-            <div class = ""><img src="img/WhatsApp-01.png" alt="LOGO" class = "h-30 w-30"></div>
-            <div class = "flex self-center">
-            <nav>
-                <ul class = "flex gap-10 text-[20px]  font-[helvetica]">
-                    <li class = "hover:underline"><a href="index.html">Home</a></li>
-                    <li class = "hover:underline"><a href="biodata.html">Biodata</a></li>
-                    <li><a href="contact.html"><u>Contact me</u></a></li>
-                    <li class = "hover:underline"><a href="additionPage.html">Additional Page</a></li>
-                    <li class = "hover:underline"><a href="additionPage.html">Additional Page</a></li>
-                </ul>
-            </nav>
-            </div>
+<body class="font-[helvetica] bg-blue-50 flex flex-col min-h-screen">
 
-            <div class = "flex self-center gap-4 font-[helvetica]">
-                <input type="button" value = "Log in   >" class = " bg-white rounded-full text-[20px]  px-7  ">
-                <input type="button" value = "Download" class = "bg-green-500 rounded-full  py-4 px-10 text-[20px] ">
+    <header class="sticky top-0 z-50 bg-white shadow-sm w-full">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div>
+                <img src="img/WhatsApp-01.png" alt="LOGO" class="h-14 w-auto">
+            </div>
+            <div class="hidden md:flex self-center">
+                <nav>
+                    <ul class="flex gap-10 text-[20px]">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li class="hover:underline"><a href="biodata.html">Biodata</a></li>
+                        <li><a href="contact.html" class="underline font-bold text-green-600">Contact me</a></li>
+                        <li class="hover:underline"><a href="posts.html">Additional Page</a></li>
+                        <li class="hover:underline"><a href="posts.html">Additional Page</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hidden md:flex self-center gap-4">
+                <input type="button" value="Log in >" class="bg-white rounded-full text-[20px] px-7 py-2 border border-black hover:bg-gray-100 cursor-pointer">
+                <input type="button" value="Download" class="bg-green-500 rounded-full py-2 px-10 text-[20px] text-white font-bold cursor-pointer">
+            </div>
+            <div class="md:hidden">
+                <button class="text-3xl">≡</button>
             </div>
         </div>
     </header>
 
-    <form class = "flex  flex-col gap-6 m-20 text-[20px] bg-gray-200">
+    <div id="mobile-navigation" class="md:hidden bg-gray-100 p-6 hidden">
+        <div class="flex flex-col gap-6 text-center">
+            <nav>
+                <ul class="flex flex-col gap-4 text-[20px]">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biodata.html">Biodata</a></li>
+                    <li><a href="contact.html" class="font-bold text-green-600">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="flex-grow container mx-auto px-4 py-10 flex justify-center">
         
-        <div class = "container max-w-fit p-auto flex items-center ">
-            <label for="name">Name: </label>
-            <input type="text" id="name" name="name" class = "border-2 border-black rounded-md w-200 bg-white" placeholder="Your Name" required>
-        </div>
+        <form class="bg-gray-200 p-8 md:p-12 rounded-[30px] shadow-lg flex flex-col gap-6 w-full max-w-3xl text-[18px]">
+            
+            <h1 class="text-3xl font-bold mb-4 text-center">Contact Form</h1>
 
-        <div class = "container max-w-fit p-auto flex items-center">
-            <label for="stdid">Student ID:</label>
-            <input type="text" id="stdid" name="stdid" class = "border-2 border-black rounded-md w-200 bg-white" placeholder="Your Student ID" required>
-        </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <label for="name" class="md:w-32 font-bold">Name:</label>
+                <input type="text" id="name" name="name" class="border border-black rounded-md w-full p-2 bg-white" placeholder="Your Name" required>
+            </div>
 
-         <div class = "container max-w-fit p-auto flex items-center">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" class = "border-2 border-black rounded-md w-200 bg-white" placeholder="Your Email" required>
-        </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <label for="stdid" class="md:w-32 font-bold">Student ID:</label>
+                <input type="text" id="stdid" name="stdid" class="border border-black rounded-md w-full p-2 bg-white" placeholder="Your Student ID" required>
+            </div>
 
-         <div class = "container  p-auto flex items-center">
-            <label for="major">Major:</label>
-            <select name="major" id="major" class = "border-2 border-black rounded-md bg-white" >
-                <option value=">fti">FTI</option>
-                <option value="fakultas lain">Fakultas lain</option>
-            </select>
-        </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <label for="email" class="md:w-32 font-bold">Email:</label>
+                <input type="text" id="email" name="email" class="border border-black rounded-md w-full p-2 bg-white" placeholder="Your Email" required>
+            </div>
 
-        <div class = "container max-w-fit p-auto flex items-center">
-            <label for="dob">Date Of birth:</label>
-            <input type="date" id="dob" name="dob" class = "border-2 border-black rounded-md w-40 bg-white">
-        </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <label for="major" class="md:w-32 font-bold">Major:</label>
+                <select name="major" id="major" class="border border-black rounded-md bg-white p-2 w-full md:w-auto">
+                    <option value="fti">FTI</option>
+                    <option value="fakultas lain">Fakultas lain</option>
+                </select>
+            </div>
 
-         <div class = "container max-w-fit p-auto flex items-center gap-4">
-            <label for="gender">Gender:</label>
-            <input type="radio" id="gender" name="gender">Male
-            <input type="radio" id="gender" name="gender">Female
-        </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <label for="dob" class="md:w-32 font-bold">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" class="border border-black rounded-md bg-white p-2 w-full md:w-auto">
+            </div>
 
-        <div class = "container max-w-fit p-auto flex">
-            <label for="area">Address:</label>
-            <textarea name="area" id="area" cols="300" rows="1" class = "border-2 border-black rounded-md bg-white" placeholder="Your Address"></textarea>
-        </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <label class="md:w-32 font-bold">Gender:</label>
+                <div class="flex gap-6">
+                    <label class="flex items-center gap-2"><input type="radio" id="male" name="gender"> Male</label>
+                    <label class="flex items-center gap-2"><input type="radio" id="female" name="gender"> Female</label>
+                </div>
+            </div>
 
-        <div class = "container max-w-fit p-auto flex items-center">
-            <label for="pn">Phone Number:</label>
-            <input type="text" id="pn" name="pn" class = "border-2 border-black rounded-md w-90 bg-white" placeholder="Your Phone Number">
-        </div>
+            <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+                <label for="area" class="md:w-32 font-bold pt-2">Address:</label>
+                <textarea name="area" id="area" rows="4" class="border border-black rounded-md bg-white w-full p-2" placeholder="Your Address"></textarea>
+            </div>
 
-        <div>
-            <input type="submit" value="Submit" class = "bg-blue-500 rounded-full  py-4 px-10 text-[20px] ">
-        </div>
+            <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
+                <label for="pn" class="md:w-32 font-bold">Phone:</label>
+                <input type="text" id="pn" name="pn" class="border border-black rounded-md w-full p-2 bg-white" placeholder="Your Phone Number">
+            </div>
 
-    </form>
+            <div class="flex gap-4 mt-6">
+                <input type="submit" value="Submit" class="bg-white border border-black rounded-full py-2 px-8 text-[16px] cursor-pointer hover:bg-gray-100 transition shadow-sm font-bold">
+                
+                <input type="reset" value="Reset" class="bg-white border border-black rounded-full py-2 px-8 text-[16px] cursor-pointer hover:bg-gray-100 transition shadow-sm font-bold">
+            </div>
+
+        </form>
+    </main>
+
+    <footer class="bg-[#111b21] text-white py-10 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">School Project Assignment • Contact Page</p>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.querySelector('button.text-3xl');
+        const menu = document.getElementById('mobile-navigation');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
