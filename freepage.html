@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation - Christmas Special</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-[helvetica] flex flex-col min-h-screen">
+
+    <header class="sticky top-0 z-50 bg-white shadow-sm w-full">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div>
+                <img src="img/WhatsApp-01.png" alt="LOGO" class="h-14 w-auto">
+            </div>
+            <div class="hidden md:flex self-center">
+                <nav>
+                    <ul class="flex gap-10 text-[20px]">
+                        <li><a href="index.html" class="hover:underline">Home</a></li>
+                        <li class="hover:underline"><a href="biodata.html">Biodata</a></li>
+                        <li class="hover:underline"><a href="contact.html">Contact me</a></li>
+                        <li><a href="post.html" class="hover:underline">Additional Page</a></li>
+                        <li class="underline font-bold text-green-500"><a href="freepage.html">Free page</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hidden md:flex self-center gap-4">
+                <input type="button" value="Log in >" class="bg-white rounded-full text-[20px] px-7 py-2 border border-black hover:bg-black hover:text-white cursor-pointer">
+                <input type="button" value="Download" class="bg-green-500 rounded-full py-2 px-10 text-[20px] text-black  cursor-pointer hover:bg-black hover:text-white">
+            </div>
+            <div class="md:hidden">
+                <button class="text-3xl">≡</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-navigation" class="md:hidden bg-gray-100 p-6 border-b border-gray-300">
+        <div class="flex flex-col gap-6 text-center">
+            <nav>
+                <ul class="flex flex-col gap-4 text-[20px]">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biodata.html">Biodata</a></li>
+                    <li><a href="contact.html">Contact me</a></li>
+                    <li><a href="post.html" class="font-bold text-green-600">Additional Page</a></li>
+                </ul>
+            </nav>
+            <div class="flex flex-col gap-4">
+                 <input type="button" value="Log in >" class="bg-white rounded-full text-[20px] py-2 px-7 border border-black">
+                 <input type="button" value="Download" class="bg-green-500 rounded-full py-2 px-10 text-[20px] text-white">
+            </div>
+        </div>
+    </div>
+
+    <main class="flex-grow bg-gradient-to-b from-red-700 to-red-900 py-10 px-4">
+        
+        <div class="container mx-auto max-w-6xl">
+            
+            <div class="text-center mb-10">
+                <h1 class="text-white text-4xl md:text-6xl font-bold drop-shadow-md">
+                    🎄 Merry Christmas 🎄
+                </h1>
+                <p class="text-red-100 text-xl mt-4">Spread the joy and kindness this season</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+
+                <div class="bg-white rounded-[30px] p-8 md:p-12 flex flex-col items-center text-center shadow-2xl flex-1 border-4 border-green-700 relative overflow-hidden">
+                    
+                    <div class="absolute -top-10 -left-10 w-24 h-24 bg-red-100 rounded-full"></div>
+
+                    <div class="mb-6 relative z-10">
+                        <span class="text-6xl">☕</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                        Feeling lonely and want to talk to a human being?
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8">
+                        Donate here.
+                    </p>
+                    
+                    <div class="bg-gray-200 w-64 h-64 rounded-xl flex items-center justify-center mb-4 border-2 border-dashed border-gray-400">
+                        <img src="img/Myqr.jpeg" alt="QR Code 1" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold">SCAN TO CHAT</p>
+                </div>
+
+                <div class="bg-white rounded-[30px] p-8 md:p-12 flex flex-col items-center text-center shadow-2xl flex-1 border-4 border-red-600 relative overflow-hidden">
+                    
+                    <div class="absolute -top-10 -right-10 w-24 h-24 bg-green-100 rounded-full"></div>
+
+                    <div class="mb-6 relative z-10">
+                        <span class="text-6xl">🎁</span>
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold text-red-700 mb-4">
+                        Would you be so kind to give someone a Christmas gift?
+                    </h2>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8">
+                        Scan this QR code to give money.
+                    </p>
+
+                    <div class="bg-gray-200 w-64 h-64 rounded-xl flex items-center justify-center mb-4 border-2 border-dashed border-gray-400">
+                        <img src="img/Myqr.jpeg" alt="QR Code 2" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                    <p class="text-sm text-gray-400 font-bold">SCAN TO GIFT</p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-[#111b21] text-white py-10 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">School Project Assignment • Christmas Page</p>
+        </div>
+    </footer>
+
+</body>
+</html>
